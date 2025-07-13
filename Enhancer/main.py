@@ -12,7 +12,6 @@ app = FastAPI()
 NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 NEWS_API_URL = "https://newsapi.org/v2/everything"
 
-# Keyword and Source customization
 PARAMS = {
     "q": "stock market",
     "language": "en",
@@ -20,6 +19,8 @@ PARAMS = {
     "apiKey": NEWS_API_KEY,
     "pageSize": 10
 }
+
+# developing
 
 @app.get("/fetch-news")
 def fetch_news():
@@ -36,6 +37,8 @@ def fetch_news():
 
     return {"status": "success", "file": file_path, "total_articles": len(data.get("articles", []))}
 
+
+# developing
 
 @app.get("/latest-news")
 def latest_news():

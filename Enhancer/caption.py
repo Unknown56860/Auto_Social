@@ -15,10 +15,10 @@ chat = model.start_chat()
 def enhance_caption(caption, upscale=False):
     prompt = (
         "Enhance this caption for a social media post. "
-        "Only return the enhanced caption with more than 40 words "
+        "Only return the enhanced caption with a word limit between 20 to 80 words as per the requiredment, and with a simple english terms."
     )
     if upscale:
-        prompt += "Make it suitable for a high-impact influencer, maximizing engagement and reach. with a word limit between 20 to 80 words as per the requiredment, and with a simple english terms."
+        prompt += "Make it suitable for a high-impact influencer, maximizing engagement and reach. "
     prompt += f"\n\n{caption}"
     try:
         response = chat.send_message(prompt)
