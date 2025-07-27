@@ -10,6 +10,12 @@
     <p>Click <a href="/about" >here</a> for about.</p>
     <p>Click <a href={% url 'users:regd' %} >here</a> for new registration</p>
     <p>Click <a href={% url 'users:login' %} >here</a> to login</p>
-    <p>Click <a href={% url 'users:logout' %} >here</a> for logout</p>
+    <p>Click 
+        <form action={% url 'users:logout' %} method="post">
+            {% csrf_token %}
+            <button title="Logout" aria-title="Logout" type="submit">here</button>
+        </form>
+        for logout
+    </p>
 </body>
 </html>

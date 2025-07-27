@@ -6,7 +6,15 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>User login will be added soon!</h1>
+    <h2>User Login</h2>
+    <form action="/users/login/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{request.GET.next}}"/>
+        {% endif %}
+        <button type="submit">Log in</button>
+    </form>
     <p>Click <a href="/" >here</a> to return back to home.</p>
 </body>
 </html>

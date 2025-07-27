@@ -1,3 +1,10 @@
+# tutorial - "https://youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&si=Osk0FpAl0I873Qiv"
+
+# Super User: superuser
+# Password: 0000
+
+# Name: user1  Password: firstuser
+
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
